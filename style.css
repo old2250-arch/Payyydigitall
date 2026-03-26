@@ -1,0 +1,224 @@
+/* ====================================================
+   STYLE.CSS - WEB DEPOSIT TWO PAY
+   Tema: Biru & Putih
+   Responsif, animasi halus
+==================================================== */
+
+/* RESET & BASE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background: linear-gradient(135deg, #e6f0fa 0%, #f0f7ff 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+}
+
+/* Container utama */
+.deposit-container {
+    max-width: 28rem;
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 1.5rem;
+    box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.2s ease;
+    animation: fadeIn 0.4s ease-out;
+}
+
+/* Header dengan gradien biru */
+.deposit-header {
+    background: linear-gradient(135deg, #0b3b5f 0%, #1e6f9f 100%);
+    padding: 2rem 1.5rem;
+    text-align: center;
+}
+
+.deposit-header h1 {
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: white;
+    letter-spacing: -0.025em;
+}
+
+.deposit-header p {
+    color: #b3e0ff;
+    margin-top: 0.5rem;
+    font-size: 0.875rem;
+}
+
+/* Form area */
+.deposit-form {
+    padding: 1.75rem;
+}
+
+/* Grup input */
+.input-group {
+    margin-bottom: 1.5rem;
+}
+
+.input-group label {
+    display: block;
+    font-weight: 600;
+    color: #1e3a5f;
+    margin-bottom: 0.5rem;
+    font-size: 0.875rem;
+}
+
+.input-group input,
+.input-group textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.75rem;
+    font-size: 1rem;
+    transition: all 0.2s;
+    background-color: #fefefe;
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+/* Area upload file */
+.file-upload-area {
+    border: 2px dashed #93c5fd;
+    border-radius: 1rem;
+    background-color: #f9fcff;
+    transition: all 0.2s;
+    cursor: pointer;
+    text-align: center;
+    padding: 1.5rem 1rem;
+}
+
+.file-upload-area:hover {
+    background-color: #eff6ff;
+    border-color: #3b82f6;
+}
+
+.file-upload-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    color: #3b82f6;
+    margin: 0 auto 0.75rem auto;
+}
+
+.file-upload-text {
+    font-size: 0.875rem;
+    color: #4b5563;
+}
+
+.file-upload-hint {
+    font-size: 0.75rem;
+    color: #9ca3af;
+    margin-top: 0.25rem;
+}
+
+.file-info {
+    margin-top: 0.75rem;
+    font-size: 0.875rem;
+    color: #10b981;
+    display: none;
+}
+
+.file-info.show {
+    display: block;
+}
+
+/* Pesan notifikasi */
+.message {
+    padding: 0.75rem 1rem;
+    border-radius: 0.75rem;
+    font-size: 0.875rem;
+    margin-bottom: 1.5rem;
+    display: none;
+}
+
+.message.success {
+    background-color: #d1fae5;
+    color: #065f46;
+    border-left: 4px solid #10b981;
+}
+
+.message.error {
+    background-color: #fee2e2;
+    color: #991b1b;
+    border-left: 4px solid #ef4444;
+}
+
+.message.show {
+    display: block;
+}
+
+/* Tombol */
+.submit-btn {
+    width: 100%;
+    background: linear-gradient(135deg, #1e6f9f 0%, #0b3b5f 100%);
+    border: none;
+    padding: 0.875rem;
+    border-radius: 0.75rem;
+    font-weight: 700;
+    font-size: 1rem;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.1s, box-shadow 0.2s;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.submit-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.submit-btn:active {
+    transform: translateY(1px);
+}
+
+.submit-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Footer */
+.deposit-footer {
+    border-top: 1px solid #e5e7eb;
+    padding: 1rem;
+    text-align: center;
+    font-size: 0.75rem;
+    color: #9ca3af;
+}
+
+/* Animasi fade in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsif */
+@media (max-width: 640px) {
+    body {
+        padding: 1rem;
+    }
+    .deposit-header h1 {
+        font-size: 1.5rem;
+    }
+    .deposit-form {
+        padding: 1.25rem;
+    }
+}
